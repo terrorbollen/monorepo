@@ -1,5 +1,3 @@
-
-import { useState } from "react";
 import { Building2, MapPin, Calendar, ChevronDown } from "lucide-react";
 import {
   Accordion,
@@ -9,29 +7,36 @@ import {
 } from "@/components/ui/accordion";
 
 const WorkExperience = () => {
-  const [experiences] = useState([
+  const experiences = [
     {
-      role: "Senior Full Stack Developer",
-      company: "Tech Solutions Inc.",
-      location: "San Francisco, CA",
-      date: "Jan 2022 - Present",
-      description: "Led development of scalable web applications using React and Django. Implemented CI/CD pipelines and managed cloud infrastructure on AWS."
+      role: "Full Stack Developer",
+      company: "Booli Search Technologies AB",
+      location: "Stockholm, Sweden",
+      date: "Jun 20221 - Present",
+      description:
+        "Booli is a real estate search engine with nearly 4 million monthly active users. I primarily worked on Booli Pro, a data-heavy, subscription-based analytics platform for real estate professionals.",
+      achivements: [
+        "Led development of Booli Pro, driving end-to-end product delivery, making key technical decisions, and ensuring customer satisfaction.",
+        "Built CI/CD pipelines in GitLab for automated testing, module auditing, and preview environments using feature branch deployments.",
+        "Developed backend features in Python (Django, FastAPI), including a persistent user settings layer compatible with legacy systems.",
+        "Delivered key full-stack features, including: Multipolygon filtering for spatial queries, Embedded in-app customer support chat, A Backend-for-Frontend layer to simplify frontend/backend integration.",
+        "Migrated graphing library from D3 to Visx, improving maintainability, performance, and visual clarity of complex analytics charts.",
+      ],
     },
     {
-      role: "Frontend Developer",
-      company: "Digital Agency Pro",
-      location: "New York, NY", 
-      date: "Mar 2020 - Dec 2021",
-      description: "Developed responsive user interfaces using React and Tailwind CSS. Collaborated with design teams to create pixel-perfect implementations."
+      role: "Software Engineer",
+      company: "Lime Technologies AB",
+      location: "Stockholm, Sweden",
+      date: "Jan 2020 - Jun 2021",
+      description:
+        "Lime is a SaaS company delivering CRM solutions to over 7,000 companies across five countries.",
+      achivements: [
+        "Tailored CRM solutions to meet client-specific needs, acting as a bridge between business requirements and technical implementation.",
+        "Built RESTful APIs in Python (Flask) to integrate customer-specific features into the CRM platform — such as automated billing workflows for law firms and logistics solutions for construction companies — improving operational efficiency and customer adoption.",
+        "Led internal tech talks to promote knowledge sharing and best practices within engineering.",
+      ],
     },
-    {
-      role: "Junior Web Developer",
-      company: "StartupXYZ",
-      location: "Austin, TX",
-      date: "Jun 2019 - Feb 2020", 
-      description: "Built and maintained company websites using JavaScript and Node.js. Gained experience with modern development workflows and version control."
-    }
-  ]);
+  ];
 
   return (
     <section id="experience" className="py-20">
@@ -39,10 +44,14 @@ const WorkExperience = () => {
         <h2 className="section-heading">
           <span className="numbered-heading">03.</span> Work Experience
         </h2>
-        
+
         <Accordion type="multiple" className="space-y-4">
           {experiences.map((experience, index) => (
-            <AccordionItem key={index} value={`experience-${index}`} className="bg-portfolio-lightNavy rounded-lg border border-portfolio-orange/20 hover:border-portfolio-orange/50 transition-colors group">
+            <AccordionItem
+              key={index}
+              value={`experience-${index}`}
+              className="bg-portfolio-lightNavy rounded-lg border border-portfolio-orange/20 hover:border-portfolio-orange/50 transition-colors group"
+            >
               <AccordionTrigger className="px-6 py-4 hover:no-underline relative">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between w-full text-left pr-8">
                   <div>
@@ -71,6 +80,13 @@ const WorkExperience = () => {
                 <p className="text-portfolio-lightSlate leading-relaxed">
                   {experience.description}
                 </p>
+                <div className="pl-2">
+                  <ul className="list-disc py-2">
+                    {experience.achivements.map((a) => (
+                      <li className="p1-2">{a}</li>
+                    ))}
+                  </ul>
+                </div>
               </AccordionContent>
             </AccordionItem>
           ))}
