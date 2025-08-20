@@ -2,7 +2,7 @@ import { useState } from "react";
 import ProjectCard, { ProjectProps } from "./ProjectCard";
 
 const Projects = () => {
-  const [projects] = useState<ProjectProps[]>([
+  const projects: ProjectProps[] = [
     {
       title: "Fun fact of the day",
       description: "Web app showing fun fact using ChatGPT-API.",
@@ -26,7 +26,7 @@ const Projects = () => {
       githubUrl: "https://github.com/terrorbollen/homelab",
       liveUrl: "",
     },
-  ]);
+  ];
 
   return (
     <section id="projects" className="py-20">
