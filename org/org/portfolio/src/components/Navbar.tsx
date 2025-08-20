@@ -13,10 +13,10 @@ const Navbar = () => {
     { label: "About", href: "#about", isHash: true },
     { label: "Projects", href: "#projects", isHash: true },
     { label: "Experience", href: "#experience", isHash: true },
-    { label: "Education", href: "#education", isHash: true },
-    { label: "Skills", href: "#skills", isHash: true },
+    // { label: "Education", href: "#education", isHash: true },
+    // { label: "Skills", href: "#skills", isHash: true },
     { label: "Contact", href: "#contact", isHash: true },
-    { label: "Blog", href: "/blog", isHash: false }
+    // { label: "Blog", href: "/blog", isHash: false }
   ];
 
   useEffect(() => {
@@ -85,7 +85,7 @@ const Navbar = () => {
                 navigate("/blog");
               } else {
                 // Handle resume download/view logic here
-                window.open("#", "_blank");
+                navigate("/");
               }
             }}
             className="btn-primary ml-4"
@@ -156,7 +156,7 @@ const Navbar = () => {
                       navigate("/blog");
                     } else {
                       // Handle resume download/view logic here
-                      window.open("#", "_blank");
+                      navigate("/");
                     }
                   }}
                   className="btn-primary w-full mt-2"
