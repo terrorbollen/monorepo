@@ -82,8 +82,10 @@ const WorkExperience = () => {
                 </p>
                 <div className="pl-2">
                   <ul className="list-disc py-2">
-                    {experience.achivements.map((a) => (
-                      <li className="p1-2">{a}</li>
+                    {experience.achivements.map((a, i) => (
+                      <li key={i} className="p1-2">
+                        {a}
+                      </li>
                     ))}
                   </ul>
                 </div>

@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { useNavigate, useLocation } from "react-router-dom";
@@ -34,10 +33,12 @@ const Navbar = () => {
   }, [scrolled]);
 
   return (
-    <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${scrolled ? "bg-portfolio-background/90 backdrop-blur shadow-lg py-4" : "py-6"}`}>
+    <header
+      className={`fixed w-full top-0 z-50 transition-all duration-300 ${scrolled ? "bg-portfolio-background/90 backdrop-blur shadow-lg py-4" : "py-6"}`}
+    >
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
-        <button 
-          onClick={() => navigate("/")} 
+        <button
+          onClick={() => navigate("/")}
           className="text-2xl font-bold text-portfolio-white hover:opacity-80 transition-opacity"
         >
           <span className="text-portfolio-accent">{"<"}</span>
@@ -51,25 +52,28 @@ const Navbar = () => {
             {navItems.map((item, index) => (
               <li key={index} className="animated-list">
                 {item.isHash ? (
-                  <a 
-                    href={item.href} 
+                  <p
+                    // href={item.href}
                     className="nav-link"
                     onClick={(e) => {
                       if (location.pathname !== "/") {
                         e.preventDefault();
                         navigate("/");
-                        setTimeout(() => {
-                          document.querySelector(item.href)?.scrollIntoView({ behavior: "smooth" });
-                        }, 100);
                       }
+
+                      setTimeout(() => {
+                        document
+                          .querySelector(item.href)
+                          ?.scrollIntoView({ behavior: "smooth" });
+                      }, 100);
                     }}
                   >
                     <span className="text-portfolio-accent">{`0${index + 1}. `}</span>
                     {item.label}
-                  </a>
+                  </p>
                 ) : (
-                  <button 
-                    onClick={() => navigate(item.href)} 
+                  <button
+                    onClick={() => navigate(item.href)}
                     className="nav-link"
                   >
                     <span className="text-portfolio-accent">{`0${index + 1}. `}</span>
@@ -79,33 +83,55 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <Button 
-            onClick={() => {
-              if (location.pathname === "/") {
-                navigate("/blog");
-              } else {
-                // Handle resume download/view logic here
-                navigate("/");
-              }
-            }}
-            className="btn-primary ml-4"
-          >
-            {location.pathname === "/" ? "Blog" : "Resume"}
-          </Button>
+          {/* <Button  */}
+          {/*   onClick={() => { */}
+          {/*     if (location.pathname === "/") { */}
+          {/*       navigate("/blog"); */}
+          {/*     } else { */}
+          {/*       // Handle resume download/view logic here */}
+          {/*       navigate("/"); */}
+          {/*     } */}
+          {/*   }} */}
+          {/*   className="btn-primary ml-4" */}
+          {/* > */}
+          {/*   {location.pathname === "/" ? "Blog" : "Resume"} */}
+          {/* </Button> */}
         </nav>
 
         {/* Mobile Menu Button */}
-        <button 
+        <button
           className="md:hidden text-portfolio-accent"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? (
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
             </svg>
           ) : (
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
             </svg>
           )}
         </button>
@@ -117,29 +143,32 @@ const Navbar = () => {
               {navItems.map((item, index) => (
                 <li key={index}>
                   {item.isHash ? (
-                    <a 
-                      href={item.href} 
+                    <p
+                      // href={item.href}
                       className="block px-6 py-2 hover:bg-portfolio-lightestNavy text-portfolio-lightSlate hover:text-portfolio-accent transition-colors"
                       onClick={(e) => {
                         setMobileMenuOpen(false);
                         if (location.pathname !== "/") {
                           e.preventDefault();
                           navigate("/");
-                          setTimeout(() => {
-                            document.querySelector(item.href)?.scrollIntoView({ behavior: "smooth" });
-                          }, 100);
                         }
+
+                        setTimeout(() => {
+                          document
+                            .querySelector(item.href)
+                            ?.scrollIntoView({ behavior: "smooth" });
+                        }, 100);
                       }}
                     >
                       <span className="text-portfolio-accent mr-2">{`0${index + 1}.`}</span>
                       {item.label}
-                    </a>
+                    </p>
                   ) : (
-                    <button 
+                    <button
                       onClick={() => {
                         setMobileMenuOpen(false);
                         navigate(item.href);
-                      }} 
+                      }}
                       className="block w-full text-left px-6 py-2 hover:bg-portfolio-lightestNavy text-portfolio-lightSlate hover:text-portfolio-accent transition-colors"
                     >
                       <span className="text-portfolio-accent mr-2">{`0${index + 1}.`}</span>
@@ -148,22 +177,22 @@ const Navbar = () => {
                   )}
                 </li>
               ))}
-              <li className="px-4 py-2">
-                <Button 
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                    if (location.pathname === "/") {
-                      navigate("/blog");
-                    } else {
-                      // Handle resume download/view logic here
-                      navigate("/");
-                    }
-                  }}
-                  className="btn-primary w-full mt-2"
-                >
-                  {location.pathname === "/" ? "Blog" : "Resume"}
-                </Button>
-              </li>
+              {/* <li className="px-4 py-2"> */}
+              {/*   <Button  */}
+              {/*     onClick={() => { */}
+              {/*       setMobileMenuOpen(false); */}
+              {/*       if (location.pathname === "/") { */}
+              {/*         navigate("/blog"); */}
+              {/*       } else { */}
+              {/*         // Handle resume download/view logic here */}
+              {/*         navigate("/"); */}
+              {/*       } */}
+              {/*     }} */}
+              {/*     className="btn-primary w-full mt-2" */}
+              {/*   > */}
+              {/*     {location.pathname === "/" ? "Blog" : "Resume"} */}
+              {/*   </Button> */}
+              {/* </li> */}
             </ul>
           </div>
         )}
