@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 md:px-6 flex flex-col items-center">
         <div className="flex space-x-6 mb-6">
           <a 
-            href="https://github.com/yourusername" 
+            href="https://github.com/terrorbollen" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-portfolio-slate hover:text-portfolio-orange transition-colors"
@@ -16,7 +16,7 @@ const Footer = () => {
             <Github size={20} />
           </a>
           <a 
-            href="https://linkedin.com/in/yourusername" 
+            href="https://www.linkedin.com/in/isak-friis-jespersen-9abb4915a" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-portfolio-slate hover:text-portfolio-orange transition-colors"
@@ -25,7 +25,7 @@ const Footer = () => {
             <Linkedin size={20} />
           </a>
           <a 
-            href="mailto:your.email@example.com" 
+            href="mailto:isak.friisjespersen@gmail.com" 
             className="text-portfolio-slate hover:text-portfolio-orange transition-colors"
             aria-label="Email Me"
           >
@@ -34,7 +34,7 @@ const Footer = () => {
         </div>
         
         <p className="text-portfolio-slate text-sm">
-          Designed & Built by <span className="text-portfolio-orange">Your Name</span>
+          Designed & Built by <span className="text-portfolio-orange">Isak Friis-Jespersen</span>
         </p>
         
         <p className="text-portfolio-slate text-xs mt-2">
