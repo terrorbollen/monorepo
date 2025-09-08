@@ -146,7 +146,7 @@ const ContactForm = () => {
 
           <div className="text-center">
             <Tooltip>
-              <TooltipTrigger>
+              <TooltipTrigger asChild>
                 <Button
                   type="submit"
                   className="btn-primary px-8 py-3"
