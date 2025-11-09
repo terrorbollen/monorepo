@@ -7,13 +7,14 @@
     "build": "next build",
     "check": "next lint && tsc --noEmit",
     "dev": "next dev --turbo",
+    "dev:wss": "cross-env PORT=3001 tsx watch ./src/server/wsServer.ts",
     "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,mdx}\" --cache",
     "format:write": "prettier --write \"**/*.{ts,tsx,js,jsx,mdx}\" --cache",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "preview": "next build && next start",
     "start": "next start",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --watch"
   },
   "dependencies": {
     "@t3-oss/env-nextjs": "^0.12.0",
@@ -26,6 +27,7 @@
     "react-dom": "^19.0.0",
     "server-only": "^0.0.1",
     "superjson": "^2.2.1",
+    "tsx": "^4.19.3",
     "ws": "^8.18.3",
     "zod": "^3.24.2"
   },
@@ -36,12 +38,14 @@
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "@types/ws": "^8.18.1",
+    "cross-env": "^7.0.3",
     "eslint": "^9.23.0",
     "eslint-config-next": "^15.2.3",
     "postcss": "^8.5.3",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "tailwindcss": "^4.0.15",
+    "tsc": "^2.0.4",
     "typescript": "^5.8.2",
     "typescript-eslint": "^8.27.0"
   },
