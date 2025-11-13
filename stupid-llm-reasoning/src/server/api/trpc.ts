@@ -7,9 +7,9 @@
  * need to use are documented accordingly near the end.
  */
 import { initTRPC } from "@trpc/server";
-import type { CreateNextContextOptions } from "@trpc/server/adapters/next";
 import superjson from "superjson";
 import { ZodError } from "zod";
+import { redisClient } from "../wsServer";
 
 /**
  * 1. CONTEXT
@@ -23,8 +23,9 @@ import { ZodError } from "zod";
  *
  * @see https://trpc.io/docs/server/context
  */
-export const createTRPCContext = async (opts: CreateNextContextOptions) => {
+export const createTRPCContext = async (opts: Headers) => {
   return {
+    redisClient,
     ...opts,
   };
 };
