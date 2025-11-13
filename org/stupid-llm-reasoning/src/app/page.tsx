@@ -7,8 +7,7 @@ export default async function Home() {
   const hello = await api.post.hello({ text: "from tRPC" });
 
   void api.post.getLatest.prefetch();
-
-  void api.post.onPostAdd().then((a) => console.log(a));
+  api.post.getLatest.prefetch({})
 
   return (
     <HydrateClient>
