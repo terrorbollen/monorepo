@@ -7,20 +7,21 @@ import { api } from "~/trpc/react";
 export function LatestPost() {
   const [latestPost] = api.post.getLatest.useSuspenseQuery();
 
-  const { data } = api.post.onPostAdd.useSubscription();
-
-  console.log(data)
-  const utils = api.useUtils();
-  const [name, setName] = useState("");
-  const createPost = api.post.create.useMutation({
+  const createPost = api.ollama.sendMessage.useMutation({
     onSuccess: async () => {
       await utils.post.invalidate();
       setName("");
     },
   });
 
+  const ping = api.ollama.testPing.useMutation();
+
+  const utils = api.useUtils();
+  const [name, setName] = useState("");
+
   return (
     <div className="w-full max-w-xs">
+      <button onClick={() => ping.mutate("Hej")}>Noooo</button>
       {latestPost ? (
         <p className="truncate">Your most recent post: {latestPost.name}</p>
       ) : (
@@ -29,7 +30,8 @@ export function LatestPost() {
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          createPost.mutate({ name });
+          console.log("Submit");
+          createPost.mutate({ roomId: '1', text: name });
         }}
         className="flex flex-col gap-2"
       >
