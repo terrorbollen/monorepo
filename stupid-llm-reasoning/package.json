@@ -8,6 +8,7 @@
     "check": "next lint && tsc --noEmit",
     "dev": "next dev --turbo",
     "dev:wss": "cross-env PORT=3001 tsx watch ./src/server/wsServer.ts",
+    "dev:redis": "cross-env PORT=3001 tsx watch ./src/server/redis.ts",
     "dev:cs": "cross-env PORT=3002 tsx watch ./src/server/chatServer.ts",
     "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,mdx}\" --cache",
     "format:write": "prettier --write \"**/*.{ts,tsx,js,jsx,mdx}\" --cache",

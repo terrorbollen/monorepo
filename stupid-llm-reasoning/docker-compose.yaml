@@ -1,7 +1,6 @@
 services:
   ollama: # New service for running the Dockerfile in /ollama
     image: ollama/ollama:latest
-    pull_policy: always
     # container_name: ollama
     # mem_limit: 2g
     # cpus: 1.2

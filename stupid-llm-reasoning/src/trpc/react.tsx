@@ -14,7 +14,6 @@ import SuperJSON from "superjson";
 
 import { type AppRouter } from "~/server/api/root";
 import { createQueryClient } from "./query-client";
-import { redisClient } from "~/server/wsServer";
 
 let clientQueryClientSingleton: QueryClient | undefined = undefined;
 const getQueryClient = () => {
@@ -27,15 +26,6 @@ const getQueryClient = () => {
 
   return clientQueryClientSingleton;
 };
-// create persistent WebSocket connection
-
-
-// const createWebSocket = () => {
-//   console.log("Coool")
-//   return createWSClient({
-//     url: `ws://localhost:3001`,
-//   });
-// };
 export const api = createTRPCReact<AppRouter>();
 
 /**
@@ -54,14 +44,16 @@ export type RouterOutputs = inferRouterOutputs<AppRouter>;
 
 export function TRPCReactProvider(props: { children: React.ReactNode }) {
   const queryClient = getQueryClient();
-
+  const client = createWSClient({
+    url: `ws://localhost:3001`,
+  });
   const [trpcClient] = useState(() =>
     api.createClient({
       links: [
-        // wsLink({
-        //   transformer: SuperJSON,
-        //   client: redisClient,
-        // }),
+        wsLink({
+          transformer: SuperJSON,
+          client,
+        }),
         loggerLink({
           enabled: (op) =>
             process.env.NODE_ENV === "development" ||
