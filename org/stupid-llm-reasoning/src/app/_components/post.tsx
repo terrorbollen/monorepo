@@ -14,14 +14,13 @@ export function LatestPost() {
     },
   });
 
-  const ping = api.ollama.testPing.useMutation();
+  const { data } = api.ollama.onMessageAdd.useSubscription({ roomId: "1" });
 
   const utils = api.useUtils();
   const [name, setName] = useState("");
 
   return (
     <div className="w-full max-w-xs">
-      <button onClick={() => ping.mutate("Hej")}>Noooo</button>
       {latestPost ? (
         <p className="truncate">Your most recent post: {latestPost.name}</p>
       ) : (
@@ -31,7 +30,7 @@ export function LatestPost() {
         onSubmit={(e) => {
           e.preventDefault();
           console.log("Submit");
-          createPost.mutate({ roomId: '1', text: name });
+          createPost.mutate({ roomId: "1", text: name });
         }}
         className="flex flex-col gap-2"
       >

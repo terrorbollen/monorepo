@@ -9,7 +9,7 @@
 import { initTRPC } from "@trpc/server";
 import superjson from "superjson";
 import { ZodError } from "zod";
-import { redisClient } from "../wsServer";
+import { redisClient } from "../redis";
 
 /**
  * 1. CONTEXT
