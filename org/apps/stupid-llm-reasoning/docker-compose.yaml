@@ -1,0 +1,22 @@
+services:
+  ollama: # New service for running the Dockerfile in /ollama
+    image: ollama/ollama:latest
+    # container_name: ollama
+    # mem_limit: 2g
+    # cpus: 1.2
+    ports:
+      - 11434:11434
+    volumes:
+      - ./model_files:/model_files
+      - ollama_volume:/root/.ollama
+    tty: true
+    entrypoint: ["/bin/sh", "/model_files/run_ollama.sh"] # Loading the finetuned Mistral with the GGUF file
+
+  redis:
+    image: redis 
+    ports:
+      - 6379:6379
+
+
+volumes:
+  ollama_volume:
