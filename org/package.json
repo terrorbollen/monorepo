@@ -54,8 +54,5 @@
     "typescript": "~5.9.2",
     "typescript-eslint": "^8.40.0",
     "@nx/vite": "22.1.0"
-  },
-  "workspaces": [
-    "apps/*"
-  ]
+  }
 }

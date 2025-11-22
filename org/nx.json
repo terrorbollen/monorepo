@@ -46,7 +46,7 @@
         "watchDepsTargetName": "watch-deps"
       },
       "exclude": [
-        "stupid-llm-reasoning/next.config.js"
+        "stupid-llm-reasoning/next.config.ts"
       ]
     },
     {
