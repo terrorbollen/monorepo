@@ -85,7 +85,7 @@ function createBlogPost(title, content) {
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-portfolio-lightestSlate mb-4">
+            <h1 className="text-4xl md:text-5xl font-bold text-portfolio-lightest-slate mb-4">
               <span className="text-portfolio-accent">06.</span> Blog
             </h1>
             <p className="text-portfolio-slate text-lg max-w-2xl mx-auto">
@@ -93,9 +93,9 @@ function createBlogPost(title, content) {
             </p>
           </div>
 
-          <Card className="bg-portfolio-lightNavy border-portfolio-orange/20">
+          <Card className="bg-portfolio-light-navy border-portfolio-orange/20">
             <CardHeader>
-              <CardTitle className="text-portfolio-lightestSlate flex items-center gap-2">
+              <CardTitle className="text-portfolio-lightest-slate flex items-center gap-2">
                 <Edit className="w-5 h-5 text-portfolio-orange" />
                 Markdown Editor
               </CardTitle>
@@ -124,13 +124,13 @@ function createBlogPost(title, content) {
                     value={markdownContent}
                     onChange={(e) => setMarkdownContent(e.target.value)}
                     placeholder="Write your markdown content here..."
-                    className="min-h-[500px] bg-portfolio-background border-portfolio-orange/20 text-portfolio-lightSlate resize-none font-mono"
+                    className="min-h-[500px] bg-portfolio-background border-portfolio-orange/20 text-portfolio-light-slate resize-none font-mono"
                   />
                   <div className="mt-4 flex gap-2">
                     <Button 
                       onClick={() => setMarkdownContent("")}
                       variant="outline"
-                      className="border-portfolio-orange/20 text-portfolio-lightSlate hover:bg-portfolio-orange/10"
+                      className="border-portfolio-orange/20 text-portfolio-light-slate hover:bg-portfolio-orange/10"
                     >
                       Clear
                     </Button>
@@ -147,28 +147,28 @@ function createBlogPost(title, content) {
                 
                 <TabsContent value="preview" className="mt-4">
                   <div className="bg-portfolio-background border border-portfolio-orange/20 rounded-lg p-6 min-h-[500px]">
-                    <div className="prose prose-invert max-w-none text-portfolio-lightSlate">
+                    <div className="prose prose-invert max-w-none text-portfolio-light-slate">
                       <ReactMarkdown
                         components={{
-                          h1: ({children}) => <h1 className="text-3xl font-bold text-portfolio-lightestSlate mb-6 pb-2 border-b border-portfolio-orange/20">{children}</h1>,
-                          h2: ({children}) => <h2 className="text-2xl font-semibold text-portfolio-lightestSlate mb-4 mt-8">{children}</h2>,
-                          h3: ({children}) => <h3 className="text-xl font-semibold text-portfolio-lightestSlate mb-3 mt-6">{children}</h3>,
-                          p: ({children}) => <p className="text-portfolio-lightSlate mb-4 leading-relaxed">{children}</p>,
-                          ul: ({children}) => <ul className="list-disc list-inside text-portfolio-lightSlate mb-4 space-y-2 ml-4">{children}</ul>,
-                          ol: ({children}) => <ol className="list-decimal list-inside text-portfolio-lightSlate mb-4 space-y-2 ml-4">{children}</ol>,
-                          li: ({children}) => <li className="text-portfolio-lightSlate">{children}</li>,
-                          blockquote: ({children}) => <blockquote className="border-l-4 border-portfolio-orange pl-4 py-2 bg-portfolio-lightNavy/50 rounded-r text-portfolio-lightSlate italic mb-4">{children}</blockquote>,
+                          h1: ({children}) => <h1 className="text-3xl font-bold text-portfolio-lightest-slate mb-6 pb-2 border-b border-portfolio-orange/20">{children}</h1>,
+                          h2: ({children}) => <h2 className="text-2xl font-semibold text-portfolio-lightest-slate mb-4 mt-8">{children}</h2>,
+                          h3: ({children}) => <h3 className="text-xl font-semibold text-portfolio-lightest-slate mb-3 mt-6">{children}</h3>,
+                          p: ({children}) => <p className="text-portfolio-light-slate mb-4 leading-relaxed">{children}</p>,
+                          ul: ({children}) => <ul className="list-disc list-inside text-portfolio-light-slate mb-4 space-y-2 ml-4">{children}</ul>,
+                          ol: ({children}) => <ol className="list-decimal list-inside text-portfolio-light-slate mb-4 space-y-2 ml-4">{children}</ol>,
+                          li: ({children}) => <li className="text-portfolio-light-slate">{children}</li>,
+                          blockquote: ({children}) => <blockquote className="border-l-4 border-portfolio-orange pl-4 py-2 bg-portfolio-light-navy/50 rounded-r text-portfolio-light-slate italic mb-4">{children}</blockquote>,
                           code: ({children, className}) => {
                             const isInline = !className;
                             return isInline ? (
-                              <code className="bg-portfolio-lightNavy text-portfolio-orange px-2 py-1 rounded text-sm font-mono">{children}</code>
+                              <code className="bg-portfolio-light-navy text-portfolio-orange px-2 py-1 rounded text-sm font-mono">{children}</code>
                             ) : (
-                              <code className="block bg-portfolio-lightNavy text-portfolio-lightSlate p-4 rounded overflow-x-auto font-mono text-sm whitespace-pre">{children}</code>
+                              <code className="block bg-portfolio-light-navy text-portfolio-light-slate p-4 rounded overflow-x-auto font-mono text-sm whitespace-pre">{children}</code>
                             );
                           },
-                          pre: ({children}) => <pre className="bg-portfolio-lightNavy rounded mb-4 overflow-hidden">{children}</pre>,
+                          pre: ({children}) => <pre className="bg-portfolio-light-navy rounded mb-4 overflow-hidden">{children}</pre>,
                           a: ({children, href}) => <a href={href} className="text-portfolio-orange hover:text-portfolio-orange/80 underline transition-colors">{children}</a>,
-                          strong: ({children}) => <strong className="text-portfolio-lightestSlate font-semibold">{children}</strong>,
+                          strong: ({children}) => <strong className="text-portfolio-lightest-slate font-semibold">{children}</strong>,
                           em: ({children}) => <em className="text-portfolio-accent italic">{children}</em>,
                         }}
                       >

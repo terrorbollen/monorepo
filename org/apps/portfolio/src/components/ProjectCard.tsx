@@ -80,7 +80,7 @@ const ProjectCard = ({
           href={githubUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-portfolio-lightestSlate hover:text-portfolio-accent"
+          className="text-portfolio-lightest-slate hover:text-portfolio-accent"
           aria-label={`GitHub repository for ${title}`}
         >
           <Github size={20} />
@@ -90,7 +90,7 @@ const ProjectCard = ({
             href={liveUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-portfolio-lightestSlate hover:text-portfolio-accent"
+            className="text-portfolio-lightest-slate hover:text-portfolio-accent"
             aria-label={`Live demo for ${title}`}
           >
             <ExternalLink size={20} />

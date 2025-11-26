@@ -34,7 +34,7 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed w-full top-0 z-50 transition-all duration-300 ${scrolled ? "bg-portfolio-background/90 backdrop-blur shadow-lg py-4" : "py-6"}`}
+      className={`fixed w-full top-0 z-50 transition-all duration-300 ${scrolled ? "bg-portfolio-background/90 backdrop-blur-sm shadow-lg py-4" : "py-6"}`}
     >
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
         <button
@@ -42,7 +42,7 @@ const Navbar = () => {
           className="text-2xl font-bold text-portfolio-white hover:opacity-80 transition-opacity"
         >
           <span className="text-portfolio-accent">{"<"}</span>
-          <span className="text-portfolio-lightestSlate">Dev</span>
+          <span className="text-portfolio-lightest-slate">Dev</span>
           <span className="text-portfolio-accent">{" />"}</span>
         </button>
 
@@ -138,14 +138,14 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="absolute top-full right-0 w-full md:w-64 bg-portfolio-lightNavy shadow-xl rounded-b-lg md:mr-4 py-4">
+          <div className="absolute top-full right-0 w-full md:w-64 bg-portfolio-light-navy shadow-xl rounded-b-lg md:mr-4 py-4">
             <ul className="flex flex-col">
               {navItems.map((item, index) => (
                 <li key={index}>
                   {item.isHash ? (
                     <p
                       // href={item.href}
-                      className="block px-6 py-2 hover:bg-portfolio-lightestNavy text-portfolio-lightSlate hover:text-portfolio-accent transition-colors"
+                      className="block px-6 py-2 hover:bg-portfolio-lightest-navy text-portfolio-light-slate hover:text-portfolio-accent transition-colors"
                       onClick={(e) => {
                         setMobileMenuOpen(false);
                         if (location.pathname !== "/") {
@@ -169,7 +169,7 @@ const Navbar = () => {
                         setMobileMenuOpen(false);
                         navigate(item.href);
                       }}
-                      className="block w-full text-left px-6 py-2 hover:bg-portfolio-lightestNavy text-portfolio-lightSlate hover:text-portfolio-accent transition-colors"
+                      className="block w-full text-left px-6 py-2 hover:bg-portfolio-lightest-navy text-portfolio-light-slate hover:text-portfolio-accent transition-colors"
                     >
                       <span className="text-portfolio-accent mr-2">{`0${index + 1}.`}</span>
                       {item.label}

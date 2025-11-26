@@ -33,7 +33,7 @@ const Education = () => {
   ]);
 
   return (
-    <section id="education" className="py-20 bg-portfolio-lightNavy">
+    <section id="education" className="py-20 bg-portfolio-light-navy">
       <div className="container mx-auto px-4 md:px-6">
         <h2 className="section-heading">
           <span className="numbered-heading">04.</span> Education
@@ -45,7 +45,7 @@ const Education = () => {
               <AccordionTrigger className="px-6 py-4 hover:no-underline relative">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between w-full text-left pr-8">
                   <div>
-                    <h3 className="text-xl font-semibold text-portfolio-lightestSlate mb-2">
+                    <h3 className="text-xl font-semibold text-portfolio-lightest-slate mb-2">
                       {edu.degree}
                     </h3>
                     <div className="flex items-center gap-4 text-portfolio-slate">
@@ -67,7 +67,7 @@ const Education = () => {
                 <ChevronDown className="w-5 h-5 text-portfolio-orange absolute right-4 top-1/2 -translate-y-1/2 transition-transform duration-200 group-hover:scale-110 data-[state=open]:rotate-180" />
               </AccordionTrigger>
               <AccordionContent className="px-6 pb-4">
-                <p className="text-portfolio-lightSlate leading-relaxed">
+                <p className="text-portfolio-light-slate leading-relaxed">
                   {edu.description}
                 </p>
               </AccordionContent>

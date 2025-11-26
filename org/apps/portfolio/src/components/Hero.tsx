@@ -10,7 +10,7 @@ const Hero = () => {
         <h1 className="text-portfolio-orange text-lg md:text-xl mb-5 font-mono">
           Hi, my name is
         </h1>
-        <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-portfolio-lightestSlate mb-4">
+        <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-portfolio-lightest-slate mb-4">
           Isak Friis-Jespersen
         </h2>
         <h3 className="text-3xl md:text-4xl lg:text-6xl font-bold text-portfolio-slate mb-6">

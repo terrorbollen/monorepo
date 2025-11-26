@@ -51,7 +51,7 @@ const Skills = () => {
   ]);
 
   return (
-    <section id="skills" className="py-20 bg-portfolio-lightNavy">
+    <section id="skills" className="py-20 bg-portfolio-light-navy">
       <div className="container mx-auto px-4 md:px-6">
         <h2 className="section-heading">
           <span className="numbered-heading">05.</span> Skills
@@ -64,7 +64,7 @@ const Skills = () => {
                 <div className="text-portfolio-orange group-hover:scale-110 transition-transform">
                   {skill.icon}
                 </div>
-                <span className="text-portfolio-lightSlate font-medium text-sm text-center">{skill.name}</span>
+                <span className="text-portfolio-light-slate font-medium text-sm text-center">{skill.name}</span>
               </div>
             </div>
           ))}

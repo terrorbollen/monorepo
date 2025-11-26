@@ -3,7 +3,7 @@ import { Github, Mail, Linkedin } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="py-8 bg-portfolio-background border-t border-portfolio-lightestNavy">
+    <footer className="py-8 bg-portfolio-background border-t border-portfolio-lightest-navy">
       <div className="container mx-auto px-4 md:px-6 flex flex-col items-center">
         <div className="flex space-x-6 mb-6">
           <a 

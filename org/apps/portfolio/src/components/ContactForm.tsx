@@ -72,7 +72,7 @@ const ContactForm = () => {
             <div>
               <label
                 htmlFor="name"
-                className="block text-portfolio-lightSlate mb-2"
+                className="block text-portfolio-light-slate mb-2"
               >
                 Name
               </label>
@@ -82,7 +82,7 @@ const ContactForm = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="bg-portfolio-lightNavy border-portfolio-lightestNavy text-portfolio-lightSlate focus:border-portfolio-accent"
+                className="bg-portfolio-light-navy border-portfolio-lightest-navy text-portfolio-light-slate focus:border-portfolio-accent"
                 disabled
               />
             </div>
@@ -90,7 +90,7 @@ const ContactForm = () => {
             <div>
               <label
                 htmlFor="email"
-                className="block text-portfolio-lightSlate mb-2"
+                className="block text-portfolio-light-slate mb-2"
               >
                 Email
               </label>
@@ -101,7 +101,7 @@ const ContactForm = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="bg-portfolio-lightNavy border-portfolio-lightestNavy text-portfolio-lightSlate focus:border-portfolio-accent"
+                className="bg-portfolio-light-navy border-portfolio-lightest-navy text-portfolio-light-slate focus:border-portfolio-accent"
                 disabled
               />
             </div>
@@ -110,7 +110,7 @@ const ContactForm = () => {
           <div>
             <label
               htmlFor="subject"
-              className="block text-portfolio-lightSlate mb-2"
+              className="block text-portfolio-light-slate mb-2"
             >
               Subject
             </label>
@@ -120,7 +120,7 @@ const ContactForm = () => {
               value={formData.subject}
               onChange={handleChange}
               required
-              className="bg-portfolio-lightNavy border-portfolio-lightestNavy text-portfolio-lightSlate focus:border-portfolio-accent"
+              className="bg-portfolio-light-navy border-portfolio-lightest-navy text-portfolio-light-slate focus:border-portfolio-accent"
               disabled
             />
           </div>
@@ -128,7 +128,7 @@ const ContactForm = () => {
           <div>
             <label
               htmlFor="message"
-              className="block text-portfolio-lightSlate mb-2"
+              className="block text-portfolio-light-slate mb-2"
             >
               Message
             </label>
@@ -139,7 +139,7 @@ const ContactForm = () => {
               value={formData.message}
               onChange={handleChange}
               required
-              className="bg-portfolio-lightNavy border-portfolio-lightestNavy text-portfolio-lightSlate focus:border-portfolio-accent"
+              className="bg-portfolio-light-navy border-portfolio-lightest-navy text-portfolio-light-slate focus:border-portfolio-accent"
               disabled
             />
           </div>

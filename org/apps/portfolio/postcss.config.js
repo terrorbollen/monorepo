@@ -1,6 +1,10 @@
+import { join } from 'path';
+
 export default {
   plugins: {
-    tailwindcss: {},
-    autoprefixer: {},
+    tailwindcss: {
+      config: join(__dirname, 'tailwind.config.ts'),
+    },
+    '@tailwindcss/postcss': {},
   },
-}
+};
