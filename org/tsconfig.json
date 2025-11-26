@@ -11,6 +11,12 @@
     },
     {
       "path": "./packages/ui"
+    },
+    {
+      "path": "./apps/portfolio"
+    },
+    {
+      "path": "./apps/stupid-llm-reasoning"
     }
   ]
 }
