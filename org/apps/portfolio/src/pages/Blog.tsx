@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Button } from "@/ui/button";
+import { Textarea } from "@/ui/textarea";
+import { Card, CardContent, CardHeader, CardTitle } from "@/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/ui/tabs";
 import ReactMarkdown from "react-markdown";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -20,7 +20,7 @@ Hi there! I'm a passionate developer who loves creating beautiful and functional
 ### What You Can Expect
 
 - **Technical tutorials** and coding tips
-- **Project showcases** and case studies  
+- **Project showcases** and case studies
 - **Industry insights** and trends
 - **Personal experiences** in development
 - **Tool reviews** and recommendations
@@ -103,14 +103,14 @@ function createBlogPost(title, content) {
             <CardContent>
               <Tabs defaultValue="edit" className="w-full">
                 <TabsList className="grid w-full grid-cols-2 bg-portfolio-background">
-                  <TabsTrigger 
-                    value="edit" 
+                  <TabsTrigger
+                    value="edit"
                     className="flex items-center gap-2 data-[state=active]:bg-portfolio-orange data-[state=active]:text-portfolio-background"
                   >
                     <Edit className="w-4 h-4" />
                     Edit
                   </TabsTrigger>
-                  <TabsTrigger 
+                  <TabsTrigger
                     value="preview"
                     className="flex items-center gap-2 data-[state=active]:bg-portfolio-orange data-[state=active]:text-portfolio-background"
                   >
@@ -118,7 +118,7 @@ function createBlogPost(title, content) {
                     Preview
                   </TabsTrigger>
                 </TabsList>
-                
+
                 <TabsContent value="edit" className="mt-4">
                   <Textarea
                     value={markdownContent}
@@ -127,14 +127,14 @@ function createBlogPost(title, content) {
                     className="min-h-[500px] bg-portfolio-background border-portfolio-orange/20 text-portfolio-light-slate resize-none font-mono"
                   />
                   <div className="mt-4 flex gap-2">
-                    <Button 
+                    <Button
                       onClick={() => setMarkdownContent("")}
                       variant="outline"
                       className="border-portfolio-orange/20 text-portfolio-light-slate hover:bg-portfolio-orange/10"
                     >
                       Clear
                     </Button>
-                    <Button 
+                    <Button
                       onClick={() => {
                         navigator.clipboard.writeText(markdownContent);
                       }}
@@ -144,7 +144,7 @@ function createBlogPost(title, content) {
                     </Button>
                   </div>
                 </TabsContent>
-                
+
                 <TabsContent value="preview" className="mt-4">
                   <div className="bg-portfolio-background border border-portfolio-orange/20 rounded-lg p-6 min-h-[500px]">
                     <div className="prose prose-invert max-w-none text-portfolio-light-slate">

@@ -1,5 +1,5 @@
 {
-  "extends": "../../tsconfig.base.json",
+  // "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "outDir": "dist",
     "types": [
@@ -10,7 +10,13 @@
     ],
     "rootDir": "src",
     "jsx": "react-jsx",
-    "tsBuildInfoFile": "dist/tsconfig.lib.tsbuildinfo"
+    "tsBuildInfoFile": "dist/tsconfig.lib.tsbuildinfo",
+    "baseUrl": ".",
+    "paths": {
+      "@/ui/*": ["./src/components/ui/*"],
+      "@/lib/*": ["./src/components/ui/lib/*"],
+      "@/components/*": ["./src/components/*"]
+    }
   },
   "exclude": [
     "out-tsc",

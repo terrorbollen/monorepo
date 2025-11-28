@@ -5,7 +5,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
+} from "@/ui/accordion";
 
 const Education = () => {
   const [education] = useState([
@@ -19,7 +19,7 @@ const Education = () => {
     {
       degree: "Full Stack Web Development Bootcamp",
       institution: "General Assembly",
-      location: "San Francisco, CA", 
+      location: "San Francisco, CA",
       date: "Jan 2019 - Apr 2019",
       description: "Intensive 12-week program covering modern web development technologies including React, Node.js, and database design."
     },
@@ -27,7 +27,7 @@ const Education = () => {
       degree: "High School Diploma",
       institution: "Tech Prep Academy",
       location: "San Jose, CA",
-      date: "Sep 2011 - Jun 2015", 
+      date: "Sep 2011 - Jun 2015",
       description: "Graduated Valedictorian with a focus on STEM subjects. President of the Computer Science Club and participated in regional programming competitions."
     }
   ]);
@@ -38,7 +38,7 @@ const Education = () => {
         <h2 className="section-heading">
           <span className="numbered-heading">04.</span> Education
         </h2>
-        
+
         <Accordion type="multiple" className="space-y-4">
           {education.map((edu, index) => (
             <AccordionItem key={index} value={`education-${index}`} className="bg-portfolio-background rounded-lg border border-portfolio-orange/20 hover:border-portfolio-orange/50 transition-colors group">
