@@ -4,7 +4,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/ui/accordion";
+} from "@ui/accordion";
 
 const WorkExperience = () => {
   const experiences = [
@@ -52,7 +52,7 @@ const WorkExperience = () => {
               value={`experience-${index}`}
               className="bg-portfolio-light-navy rounded-lg border border-portfolio-orange/20 hover:border-portfolio-orange/50 transition-colors group"
             >
-              <AccordionTrigger className="px-6 py-4 hover:no-underline relative">
+              <AccordionTrigger className="px-6 py-4 hover:no-underline relative w-full">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between w-full text-left pr-8">
                   <div>
                     <h3 className="text-xl font-semibold text-portfolio-lightest-slate mb-2">

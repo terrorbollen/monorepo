@@ -13,9 +13,6 @@
     "tsBuildInfoFile": "dist/tsconfig.lib.tsbuildinfo",
     "baseUrl": ".",
     "paths": {
-      "@/ui/*": ["./src/components/ui/*"],
-      "@/lib/*": ["./src/components/ui/lib/*"],
-      "@/components/*": ["./src/components/*"]
     }
   },
   "exclude": [

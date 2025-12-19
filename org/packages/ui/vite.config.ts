@@ -4,6 +4,7 @@ import react from '@vitejs/plugin-react';
 import dts from 'vite-plugin-dts';
 import path from 'path';
 import tailwindcss from '@tailwindcss/vite';
+import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 
 export default defineConfig(() => ({
   root: __dirname,
@@ -11,6 +12,7 @@ export default defineConfig(() => ({
   plugins: [
     react(),
     tailwindcss(),
+    nxViteTsPaths(),
     dts({
       entryRoot: 'src',
       tsconfigPath: path.join(__dirname, 'tsconfig.lib.json'),

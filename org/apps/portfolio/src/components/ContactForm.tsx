@@ -1,14 +1,14 @@
 import { useState } from "react";
-import { Button } from "@/ui/button";
-import { Input } from "@/ui/input";
-import { Textarea } from "@/ui/textarea";
-import { useToast } from "@/ui/use-toast";
+import { Button } from "@ui/button";
+import { Input } from "@ui/input";
+import { Textarea } from "@ui/textarea";
+import { useToast } from "@ui/use-toast";
 import {
   Tooltip,
   TooltipProvider,
   TooltipContent,
   TooltipTrigger,
-} from "@/ui/tooltip";
+} from "@ui/tooltip";
 
 const ContactForm = () => {
   const { toast } = useToast();

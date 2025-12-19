@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { Button } from "@/ui/button";
-import { Textarea } from "@/ui/textarea";
-import { Card, CardContent, CardHeader, CardTitle } from "@/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/ui/tabs";
+import { Button } from "@ui/button";
+import { Textarea } from "@ui/textarea";
+import { Card, CardContent, CardHeader, CardTitle } from "@ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@ui/tabs";
 import ReactMarkdown from "react-markdown";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
