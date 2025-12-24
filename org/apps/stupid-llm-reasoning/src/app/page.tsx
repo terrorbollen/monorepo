@@ -1,14 +1,16 @@
-import { api, HydrateClient } from "~/trpc/server";
+import { HydrateClient } from "~/trpc/server";
+import Thinking from "./_components/Thinking";
 
 export default async function Home() {
   return (
     <HydrateClient>
-      <main className="flex h-full justify-center bg-red-200">
-        <div className="flex flex-col mt-96 ">
-          <h1 className="text-xl">Stupid LLM Reasonging.</h1>
-          <p>Get into my brain and se how I resonate.</p>
-        </div>
-      </main>
+      <div>
+        <h1 className="text-xl">Stupid LLM Reasonging.</h1>
+        <p className="text-muted-foreground">Get into my brain and se how I resonate.</p>
+      </div>
+      <div className="h-full w-full bg-card">
+        <Thinking />
+      </div>
     </HydrateClient>
   );
 }

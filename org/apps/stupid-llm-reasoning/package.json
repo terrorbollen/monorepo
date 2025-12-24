@@ -6,7 +6,7 @@
   "scripts": {
     "build": "next build",
     "check": "next lint && tsc --noEmit",
-    "dev": "next dev --turbo",
+    "dev": "next dev",
     "dev:wss": "cross-env PORT=3001 tsx watch ./src/server/wsServer.ts",
     "dev:redis": "cross-env PORT=3001 tsx watch ./src/server/redis.ts",
     "dev:cs": "cross-env PORT=3002 tsx watch ./src/server/chatServer.ts",
@@ -55,6 +55,5 @@
   },
   "ct3aMetadata": {
     "initVersion": "7.40.0"
-  },
-  "packageManager": "pnpm@10.17.1"
+  }
 }

@@ -1,4 +1,5 @@
 import "~/styles/globals.css";
+import "~/styles/index.css";
 
 import { type Metadata } from "next";
 import { Geist } from "next/font/google";
@@ -20,9 +21,15 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${geist.variable}`}>
+    <html lang="en" className={`dark ${geist.variable}`}>
       <body>
-        <TRPCReactProvider>{children}</TRPCReactProvider>
+        <TRPCReactProvider>
+          <main className="flex h-full justify-center bg-background text-white">
+            <div className="mt-42 mx-16 mb-16 w-full max-w-3xl flex flex-col space-y-2">
+              {children}
+            </div>
+          </main>
+        </TRPCReactProvider>
       </body>
     </html>
   );

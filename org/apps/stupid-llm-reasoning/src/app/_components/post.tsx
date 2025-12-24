@@ -14,8 +14,6 @@ export function LatestPost() {
     },
   });
 
-  const { data } = api.ollama.onMessageAdd.useSubscription({ roomId: "1" });
-
   const utils = api.useUtils();
   const [name, setName] = useState("");
 
